@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css">
     <script>
       (function configureCommentaryReviewParent() {
-        var allowedParentOrigins = new Set(["https://commentary.dev", "http://localhost:3000", "http://localhost:3001"]);
+        var allowedParentOrigins = new Set(["https://commentary.dev", "https://staging.commentary.dev", "http://localhost:3000", "http://localhost:3001"]);
         var referrerOrigin = document.referrer ? new URL(document.referrer).origin : "";
         window.__COMMENTARY_PARENT_ORIGIN__ = allowedParentOrigins.has(referrerOrigin) ? referrerOrigin : "https://commentary.dev";
       })();
