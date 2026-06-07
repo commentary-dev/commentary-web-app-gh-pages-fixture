@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GitHub Pages Web App Review Fixture</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+      (function configureCommentaryReviewParent() {
+        var allowedParentOrigins = new Set(["https://commentary.dev", "http://localhost:3000", "http://localhost:3001"]);
+        var referrerOrigin = document.referrer ? new URL(document.referrer).origin : "";
+        window.__COMMENTARY_PARENT_ORIGIN__ = allowedParentOrigins.has(referrerOrigin) ? referrerOrigin : "https://commentary.dev";
+      })();
+      window.__COMMENTARY_COMMIT_SHA__ = "github-pages-fixture-commit";
+      window.__COMMENTARY_BUILD_ID__ = "github-pages-fixture-build";
+    </script>
+    <script src="./commentary-review-sdk.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="./" data-route-link data-target-route="/">Overview</a>
+      <a href="./settings/billing" data-route-link data-target-route="/settings/billing">Billing</a>
+      <a href="./checkout" data-route-link data-target-route="/checkout">Checkout</a>
+    </header>
+
+    <main class="app-shell">
+      <section data-page="home">
+        <p class="eyebrow">GitHub Pages</p>
+        <h1>GitHub Pages Web App Review fixture</h1>
+        <p>This customer-owned deployed preview fixture includes the Commentary review SDK and stable selectors.</p>
+        <button
+          type="button"
+          class="primary-action"
+          data-counter-button
+          data-commentary-id="HostedGithubPages.primaryCta"
+          data-commentary-component="HostedGithubPages"
+          data-commentary-source="src/HostedGithubPages.tsx:31:7">
+          Primary CTA
+        </button>
+        <p>CTA clicks: <span data-counter-value>0</span></p>
+      </section>
+
+      <section data-page="billing" hidden>
+        <p class="eyebrow">Settings</p>
+        <h1>Billing settings</h1>
+        <label>
+          API token
+          <input name="api_token" aria-label="API token" placeholder="Token metadata is redacted">
+        </label>
+        <button
+          type="button"
+          data-commentary-id="HostedGithubPages.saveButton"
+          data-commentary-component="HostedGithubPages"
+          data-commentary-source="src/HostedGithubPages.tsx:54:9">
+          Save changes
+        </button>
+      </section>
+
+      <section data-page="checkout" hidden>
+        <p class="eyebrow">Checkout</p>
+        <h1>Checkout</h1>
+        <button type="button" aria-label="Submit checkout">Submit order</button>
+      </section>
+    </main>
+  </body>
+</html>
