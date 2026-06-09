@@ -1,6 +1,7 @@
 {
   "sourceType": "github_pages",
   "expectedDeploymentUrl": "https://commentary-dev.github.io/commentary-web-app-gh-pages-fixture/",
-  "expectedSdkVersion": "0.1.0",
+  "expectedSdkVersion": "0.1.1",
+  "sdkScriptUrl": "https://cdn.commentary.dev/review-sdk/latest/commentary-review-sdk.js",
   "mutable": false
 }
