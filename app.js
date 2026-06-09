@@ -8,7 +8,8 @@
   let counter = 0;
 
   function normalizedRoute() {
-    const path = window.location.pathname.replace(/^\/commentary-web-app-gh-pages-fixture/u, "") || "/";
+    const rawPath = window.location.pathname.replace(/^\/commentary-web-app-gh-pages-fixture/u, "") || "/";
+    const path = rawPath.length > 1 ? rawPath.replace(/\/+$/u, "") : rawPath;
     return routeToPage.has(path) ? path : "/";
   }
 
